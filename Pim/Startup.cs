@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Pim.Data;
 
+
 namespace Pim
 {
     public class Startup
@@ -38,6 +39,8 @@ namespace Pim
 
             services.AddDbContext<PimContext>(options =>
                     options.UseMySql(Configuration.GetConnectionString("PimContext"), builder => builder.MigrationsAssembly("Pim")));
+
+          
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

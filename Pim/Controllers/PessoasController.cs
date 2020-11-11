@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Pim.Data;
 using Pim.Models;
+using Pim.Models.ViewModel;
 
 namespace Pim.Controllers
 {
@@ -49,7 +50,8 @@ namespace Pim.Controllers
         public IActionResult Create()
         {
             ViewData["EnderecoId"] = new SelectList(_context.Endereco, "Id", "Id");
-            return View();
+            var viewModel = new PessoaFormViewModel();
+            return View(viewModel);
         }
 
         // POST: Pessoas/Create

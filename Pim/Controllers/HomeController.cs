@@ -24,7 +24,7 @@ namespace Pim.Controllers
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Projeto PimVIII - Unip";
 
             return View();
         }
